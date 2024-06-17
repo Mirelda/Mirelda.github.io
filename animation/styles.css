@@ -1,0 +1,33 @@
+body{
+    background-color: blue;
+}
+
+#road{
+    border-bottom: 7px dashed black;
+}
+
+#runner{
+    background: url(animation\panda_colour.html);
+    width: 250px;
+    height: 330px;
+    animation:walk 1s steps (12)infinite, forwards 5s linear infinite;
+}
+
+
+@keyframes walk{
+    0%{
+        background-position: 0px;
+    }100%{
+        background-position: 3000px;
+    }
+}
+
+@keyframes forward  {
+    0%{
+        transform: translate(-100px);
+    }
+    100%{
+        transform: translate(1200px);
+    }
+    
+}

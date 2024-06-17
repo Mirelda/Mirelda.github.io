@@ -1,77 +1,89 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1f2a44;
-    color: #ffffff;
+    background-color: #293A56;
+    color: #333;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    text-align: center;
+    min-height: 100vh;
+    animation: walking 10s linear infinite;
+    align-self: flex-end;
 }
 
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+.aboutme{
+    
 }
 
-.buttons {
-    position: relative;
+.content {
+    background-color: #F3F3F3;
+   
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-    height: 250px;
-    margin: 0 auto 40px;
-}
-
-.button {
-    position: absolute;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-weight: bold;
-    color: #1f2a44;
-    transition: background-color 0.3s ease;
-}
-
-#resume {
-    background-color: #7e506c;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-#github {
-    background-color: #db9c9c;
-    top: 50px;
-    left: 20%;
-    transform: translate(-50%, 0);
-}
-
-#linkedin {
-    background-color: #9485a8;
-    top: 100px;
-    left: 70%;
-    transform: translate(-50%, 0);
-}
-
-#contact {
-    background-color: #d8ccb4;
-    top: 150px;
-    left: 30%;
-    transform: translate(-50%, 0);
-}
-
-.content, .footer {
+    max-width: 800px;
     text-align: left;
-    line-height: 1.6;
-    margin-bottom: 20px;
+}
+.skills{
+    background-image: url(images/arkaplan.png);
+    background-position: 100%;
+    height: auto;
+    
 }
 
-.footer {
-    font-size: 0.9em;
-    color: #d1d1d1;
+.timeline
+{
+    background-image: url(images/arkaplan.png);
+    background-position: 100%;
+   
+}
+
+
+
+h1, h2 {
+    color: #2C3E50;
+    margin-bottom: 15px;
+    font-family: monospace;
+}
+
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+    
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
 }
