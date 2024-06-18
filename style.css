@@ -79,7 +79,7 @@ img {
 .dropdown {
     position: absolute; /* Mutlaka konumu sabit olmalı */
     top: 10px; /* Sayfanın üstünden 10px mesafede */
-    left: 10px; /* Sağ köşede 10px mesafede */
+    right: 10px; /* Sağ köşede 10px mesafede */
 }
 
 .button-56 {
