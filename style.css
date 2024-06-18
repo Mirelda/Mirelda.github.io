@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #293A56;
     color: #333;
+    cursor: default;
 }
 
 .container {
@@ -17,39 +18,21 @@ body {
     align-items: center;
     padding: 20px;
     min-height: 100vh;
-    animation: walking 10s linear infinite;
-    align-self: flex-end;
-}
-
-.aboutme{
-    
+    position: relative;
 }
 
 .content {
     background-color: #F3F3F3;
-   
+    background-image: url(images/arkaplan.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
     max-width: 800px;
     text-align: left;
 }
-.skills{
-    background-image: url(images/arkaplan.png);
-    background-position: 100%;
-    height: auto;
-    
-}
-
-.timeline
-{
-    background-image: url(images/arkaplan.png);
-    background-position: 100%;
-   
-}
-
-
 
 h1, h2 {
     color: #2C3E50;
@@ -57,33 +40,107 @@ h1, h2 {
     font-family: monospace;
 }
 
-
 p {
     line-height: 1.6;
     margin-bottom: 15px;
+    color: #ECE7F1;
+}
+
+p:hover {
+    background-color: #5f9388;
+    border-radius: 8px;
 }
 
 img {
     display: block;
     margin: 20px auto;
     width: 100%;
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
+    border-radius: 10%;
 }
-
-
 
 /* Responsive styles */
 @media (max-width: 600px) {
     .content {
         padding: 20px;
     }
-    
+
     h1, h2 {
         font-size: 1.5em;
     }
-    
+
     p {
         font-size: 1em;
     }
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: absolute; /* Mutlaka konumu sabit olmalı */
+    top: 10px; /* Sayfanın üstünden 10px mesafede */
+    left: 10px; /* Sağ köşede 10px mesafede */
+}
+
+.button-56 {
+    background-color: #6BA390;
+    border: 2px solid #1F2544;
+    border-radius: 8px;
+    color: #111;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block; /* Butonu blok element yaparak menüyü düzgün göstermek için */
+    text-align: center; /* Buton içeriğini ortala */
+    position: relative; /* Butonun konumlandırması */
+    z-index: 1; /* Butonun menünün önünde kalması */
+}
+
+.button-56:after {
+    background-color: #ECE7F1;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: calc(100% + 4px); /* Buton yüksekliği + border genişliği */
+    width: calc(100% + 4px); /* Buton genişliği + border genişliği */
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    z-index: -1;
+    transition: transform .2s ease-out;
+    transform: translate(8px, 8px); /* Buton kenarlık efekti */
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0); /* Buton üzerine gelindiğinde kenarlık efektinin pozisyonu */
+}
+
+.button-56:hover {
+    background-color: #ffdeda; /* Buton üzerine gelindiğinde arka plan rengi */
+    outline: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Menü arka plan rengi */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Menü gölge efekti */
+    z-index: 2; /* Menünün butondan üstte olması */
+    border-radius: 8px; /* Menü köşe yuvarlama */
+    overflow: hidden; /* Menü içeriğinin sınırlarından taşmasını engelleme */
+    right: 0; /* Sağa doğru konumlandırma */
+    top: calc(100% + 10px); /* Butondan 10 piksel aşağıda başlama */
+}
+
+.dropdown-content a {
+    color: #474F7A;
+    padding: 10px 20px; /* Bağlantı içeriği kenar mesafesi */
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+.dropdown-content a:hover {
+    background-color: #FFD0EC; /* Bağlantı üzerine gelindiğinde arka plan rengi */
 }

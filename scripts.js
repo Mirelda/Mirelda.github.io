@@ -1,15 +1,16 @@
-document.getElementById('resume').onclick = function() {
-    window.location.href = 'https://drive.google.com/file/d/1o2GjB_0FYPTFJe6fmM3OYnmd5m38k2XM/view?usp=drive_link'; 
-};
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.querySelector(".button-56");
+    const dropdownContent = document.querySelector(".dropdown-content");
 
-document.getElementById('github').onclick = function() {
-    window.location.href = 'https://github.com/Mirelda'; 
-};
+    // Butona tıklanınca menüyü aç/kapat
+    button.addEventListener("click", function() {
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+    });
 
-document.getElementById('linkedin').onclick = function() {
-    window.location.href = 'https://www.linkedin.com/in/mirelda-diker/'; 
-};
-
-document.getElementById('contact').onclick = function() {
-    window.location.href = 'mailto:mireldadiker@gmail.com'; 
-};
+    // Buton dışında bir yere tıklanınca menüyü kapat
+    document.addEventListener("click", function(event) {
+        if (!button.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.style.display = "none";
+        }
+    });
+});
